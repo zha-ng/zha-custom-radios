@@ -1,0 +1,8 @@
+{
+	"domain": "zha_custom_radios",
+	"name": "ZHA Custom Radios",
+	"documentation": "https://github.com/zha-ng/zha-custom-radios",
+	"dependencies": ["zha"],
+	"codeowners": [],
+	"requirements": ["git+https://github.com/zha-ng/zigpy-znp.git@master#zigpy-znp==0.1.0"]
+}
