@@ -3,7 +3,7 @@ import importlib
 from homeassistant.components.zha.core.const import RadioType
 
 
-DOMAIN = "zha_custom_radios"
+DOMAIN = "custom_zha_radios"
 
 
 def inject_enum_member(target_enum, name, value):
@@ -30,7 +30,7 @@ def inject_enum_member(target_enum, name, value):
 
 def setup(hass, config):
     """
-    Injects modules specified in `zha_custom_radios`'s configration into `zha`.
+    Injects modules specified in `custom_zha_radios`'s configration into `zha`.
     """
 
     custom_names = list(config[DOMAIN].keys())

@@ -9,7 +9,7 @@ If you're using HACS, add `https://github.com/zha-ng/zha-custom-radios` as [a cu
 The latest release of [`zigpy-znp`](https://github.com/zha-ng/zigpy-znp) is already a dependency in the `manifest.json` so all you need to do is add the following section to your `configuration.yaml`:
 
 ```yaml
-zha_custom_radios:
+custom_zha_radios:
   znp:
     module: zigpy_znp.zigbee.application
     description: TI CC13x2, CC26x2, and ZZH

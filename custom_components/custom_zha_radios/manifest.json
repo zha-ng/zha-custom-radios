@@ -1,6 +1,6 @@
 {
-	"domain": "zha_custom_radios",
-	"name": "ZHA Custom Radios",
+	"domain": "custom_zha_radios",
+	"name": "Custom ZHA Radios",
 	"documentation": "https://github.com/zha-ng/zha-custom-radios",
 	"dependencies": [],
 	"codeowners": [],
