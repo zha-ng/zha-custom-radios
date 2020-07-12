@@ -1,8 +1,7 @@
+import logging
 import importlib
 
-from homeassistant.components.zha.core.const import RadioType
-
-
+LOGGER = logging.getLogger(__name__)
 DOMAIN = "custom_zha_radios"
 
 
@@ -33,6 +32,13 @@ def setup(hass, config):
     Injects modules specified in `custom_zha_radios`'s configration into `zha`.
     """
 
+    try:
+        from homeassistant.components.zha.core.const import RadioType
+    except ImportError:
+        LOGGER.error("It looks like HA has not finished setting up its dependencies yet"
+                     " on first launch. Restart Home Assistant once it finishes.")
+        return False
+
     custom_names = list(config[DOMAIN].keys())
     original_names = list(RadioType._member_names_)
 
@@ -41,6 +47,7 @@ def setup(hass, config):
         app = module.ControllerApplication
         description = obj["description"]
 
+        LOGGER.info("Injecting %s (%s) as a new radio type", name, obj)
         inject_enum_member(RadioType, name, (description, app))
 
     # New keys are moved up top
