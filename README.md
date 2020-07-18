@@ -1,3 +1,7 @@
+# This package is obsolete and will not reliably work. Install [zha-ng/zigpy-znp's custom component](https://github.com/zha-ng/zigpy-znp/blob/dev/custom_components/zha_custom_radios.py) instead.
+
+----
+
 # zha-custom-radios
 
 Adds support for custom radio modules to Home Assistant's [ZHA (Zigbee Home Automation) integration component](https://www.home-assistant.io/integrations/zha/). This custom component allows users to test out new modules before they're integrated into ZHA and develop new zigpy radio modules without having to modify the Home Assistant source code.
